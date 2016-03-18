@@ -441,35 +441,8 @@ Load google js platform
 
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-<script>
-    function onSignIn(googleUser) {
-        var id_token = googleUser.getAuthResponse().id_token;
-        var callback;
-        httpGetAsync("https://www.googleapis.com/oauth2/v3/tokeninfo?id_token="+id_token, callback);
+<script src="js/auth.js"></script>
 
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail());
-    }
-
-    function httpGetAsync(theUrl, callback)
-    {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.onreadystatechange = function() {
-            if (xmlHttp.readyState == 4){
-                    if(xmlHttp.status == 200){
-                        callback(true, xmlHttp.responseText);
-                    }else{
-                        callback(false);
-                    }
-            }
-        }
-        xmlHttp.open("GET", theUrl, true);
-        xmlHttp.send(null);
-    }
-</script>
 
 
 
