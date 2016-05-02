@@ -1,0 +1,540 @@
+/*
+*
+*
+*
+* css by benjaminbrogniart.com
+*
+*
+*
+*/
+
+
+
+/*
+
+fonts
+
+*/
+
+@font-face {
+	font-family: 'Orator Std';
+	src: url("../fonts/OratorStd.otf");
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Roboto Light'), local('Roboto-Light'), url(http://themes.googleusercontent.com/static/fonts/roboto/v9/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+
+
+/*
+
+body
+
+*/
+
+body {
+	font-family: Roboto, arial, sans-serif;
+	font-size: 16px;
+	line-height: 180%;
+	min-width: 768px;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/* 
+
+navbar
+
+*/
+
+#navbar {
+	padding-bottom: 2px;
+}
+
+#gotop {
+	background: url(../../img/gotop-b.png) center no-repeat;
+	color: transparent;
+}
+
+#gotop:hover {
+	background: url(../../img/gotop-w.png) center no-repeat;
+	color: transparent;
+}
+
+#nav {
+	background: url(../../img/nav-b.png) center no-repeat;
+	color: transparent;
+}
+
+#nav:hover {
+	background: url(../../img/nav-w.png) center no-repeat;
+	color: transparent;
+}
+
+#email {
+	background: url(../../img/email-b.png) center no-repeat;
+	color: transparent;
+}
+
+#email:hover {
+	background: url(../../img/email-w.png) center no-repeat;
+	color: transparent;
+}
+
+#twitter {
+	background: url(../../img/twitter-b.png) center no-repeat;
+	color: transparent;
+}
+
+#twitter:hover {
+	background: url(../../img/twitter-w.png) center no-repeat;
+	color: transparent;
+}
+
+#facebook {
+	background: url(../../img/facebook-b.png) center no-repeat;
+	color: transparent;
+}
+
+#facebook:hover {
+	background: url(../../img/facebook-w.png) center no-repeat;
+	color: transparent;
+}
+
+.float-right {
+	float: right;
+}
+
+nav {
+	z-index: 1;
+	width: 100%;
+	min-width: 768px;
+	margin-top: -16px;
+	position: fixed;
+}
+
+nav ul ul {
+	display: none;
+}
+
+nav ul li:hover > ul {
+	display: block;
+}
+
+
+nav ul {
+	background: #efefef;  
+	list-style: none;
+	position: relative;
+	padding: 0 20px;
+}
+	
+nav ul:after {
+	content: ""; 
+	clear: both; 
+	display: block;
+}
+
+nav ul li {
+	float: left;
+}
+
+nav ul li:hover {
+	background: #323232;
+}
+
+nav ul li:hover #nav{
+	background: url(../../img/nav-w.png) center no-repeat;
+	color: transparent;
+}
+
+nav ul li a {
+	color: #757575; 
+	text-decoration: none;
+	padding: 20px 40px;
+	display: block; 
+}
+		
+nav ul ul {
+	background: #646464; 
+	border-radius: 0px; 
+	padding: 0;
+	position: absolute; 
+	top: 100%;
+}
+
+nav ul ul li {
+	float: none;  
+	position: relative;
+}
+
+nav ul ul li a {
+	color: #fff;
+	padding: 15px 40px;
+}	
+
+nav ul ul li a:hover {
+	background: #323232;
+}
+	
+nav ul ul ul {
+	left: 100%;
+	position: absolute;  
+	top:0;
+}
+
+
+
+/* 
+
+sections
+
+*/
+
+h1, h2, h3, #description {
+	color: #fff;
+	font-family: Orator Std, arial, sans-serif;
+	font-weight: normal;
+}
+
+#description {
+	font-size: 24px;
+	letter-spacing: 0.1em;
+	text-shadow: 0px 0px 10px #757575;
+	margin-left: 15%;
+	margin-right: 15%;
+	padding-top: 120px;
+	text-align: center;
+}
+
+
+h1 {
+	font-size: 68px;
+	letter-spacing: 0.2em;
+	text-shadow: 0px 0px 10px #fff;
+	padding-top: 26vh;
+	text-align: center;
+}
+
+h2 {
+	font-size: 48px;
+	letter-spacing: 0.1em;
+	text-shadow: 0px 0px 10px #fff;
+	padding-top: 100px;
+	margin-left: 15%;
+}
+
+h3 {
+	font-family: Roboto;
+	color: #757575;
+	font-size: 36px;
+	letter-spacing: 0.1em;
+	padding-top: 100px;
+	margin-left: 15%;
+}
+
+#overview {
+	margin-left: 0px;
+	margin-bottom: -20px;
+	text-align: center;
+}
+
+.indent {
+	text-indent: 2em;
+}
+
+.extra-margin {
+	margin-left: 5%;
+}
+
+big{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.content {
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.content li {
+	list-style-type: circle;
+}
+
+.content a {
+	color: #757575;
+}
+
+.content a:hover {
+	color: #323232;
+}
+
+.play-button {
+    vertical-align: middle;
+    border-radius: 6px;
+    text-shadow: 0px -1px 0px rgb(120, 222, 255);
+    color: rgb(19, 131, 168);
+    text-decoration: none;
+    display: inline-block;
+    line-height: 56px;
+    position: relative;
+    height: 56px;
+    width: 210px;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.05);
+    background: transparent linear-gradient(rgb(255, 255, 255) 80%, rgb(166, 217, 238) 100%) repeat scroll 0% 0%;
+}
+
+.play-button .play-icon {
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent url(../../img/logo-play.png) no-repeat scroll center center;
+    float: left;
+    width: 30%;
+    font-size: 2.5em;
+    text-transform: lowercase;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.3);
+    text-indent: -9999px;
+}
+
+#overview-bg {
+	background: url(../../img/erocoli-art01.jpg) 50% 0 no-repeat fixed; 
+	height: 100vh;
+	min-height: 700px;
+    width: 100%;
+    min-width: 768px;
+    max-width: 1920px; 
+	margin: 0 auto;
+	margin-top: -58px;
+    position: relative; 
+}
+
+#science-design-bg, #team-dev-bg { 
+	background: url(../../img/erocoli-art02.jpg) 50% 0 no-repeat fixed; 
+	height: 400px;
+    width: 100%; 
+    min-width: 768px;
+    max-width: 1920px; 
+    margin: 0 auto; 
+    position: relative; 
+}
+
+#team-dev-bg { 
+	background: url(../../img/erocoli-art03.jpg) 50% 0 no-repeat fixed; 
+}
+
+@-webkit-keyframes cf4FadeInOut {
+	0% {
+		opacity:1;
+	}
+	17% {
+		opacity:1;
+	}
+	25% {
+		opacity:0;
+	}
+	92% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@-moz-keyframes cf4FadeInOut {
+	0% {
+		opacity:1;
+	}
+	17% {
+		opacity:1;
+	}
+	25% {
+		opacity:0;
+	}
+	92% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@-o-keyframes cf4FadeInOut {
+	0% {
+		opacity:1;
+	}
+	17% {
+		opacity:1;
+	}
+	25% {
+		opacity:0;
+	}
+	92% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@keyframes cf4FadeInOut {
+	0% {
+	opacity:1;
+	}
+	17% {
+	opacity:1;
+	}
+	25% {
+	opacity:0;
+	}
+	92% {
+	opacity:0;
+	}
+	100% {
+	opacity:1;
+	}
+}
+
+#cf4a {
+	margin-left: 26%;
+	margin-top: -30px;
+	padding-bottom: 30%;
+}
+
+#cf4a img {
+  	position: absolute;
+  	min-width: 384px;
+  	min-height: 216px;
+  	max-width: 52%;
+	max-height: 52%;
+}
+
+#cf4a img {
+  -webkit-animation-name: cf4FadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 8s;
+
+  -moz-animation-name: cf4FadeInOut;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 8s;
+
+  -o-animation-name: cf4FadeInOut;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-duration: 8s;
+
+  animation-name: cf4FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+}
+
+#cf4a img:nth-of-type(1) {
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -o-animation-delay: 6s;
+  animation-delay: 6s;
+}
+
+#cf4a img:nth-of-type(2) {
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -o-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+#cf4a img:nth-of-type(3) {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+#cf4a img:nth-of-type(4) {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+}
+
+#img-droid {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#img-virus {
+	margin-top: 140px;
+	margin-right: 15%;
+	float: right;
+}
+
+#img-tentacle {
+	margin-top: -25px;
+	float: right;
+}
+
+#img-medusa {
+	margin-top: -24px;
+	margin-right: 12px;
+	float: left;
+}
+
+#img-biosynth{
+	margin-top: 40px;
+	float: right;
+	opacity: .8;
+}
+
+#img-syndesign, #img-simulator {
+    margin-left: 5%;
+}
+
+#img-gameloop-easy, #img-gameloop-med, #img-gameloop-hard {
+	margin-top: 15px;
+	margin-left: 5%;
+}
+
+.team-tile{
+	text-align: center;
+	display: inline-block;
+	width: 180px;
+	margin-left: 5%;
+	margin-top: 20px;
+}
+
+.team-tile img{
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* 
+
+foot
+
+*/
+
+#foot{
+	background: #efefef;
+	height: 68px;
+	width: 100%;
+	text-align: center;
+}
+
+#text-foot{
+	padding-top: 20px;;
+	letter-spacing: 0.1em;
+	text-decoration: none;
+	font-size: 14px;
+}
