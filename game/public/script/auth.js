@@ -8,16 +8,9 @@
  */
 function onSignIn(googleUser) {
     var id_token = googleUser.getAuthResponse().id_token;
-
-    httpGetAsync("ttak.chzo.fr:54321/session/"+id_token+"/", readResulst);
-
-
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail());
-    console.log('Token: ' + id_token);
+    gUser = googleUser;
+    //TODO show the game
+    //TODO hide the button
 }
 
 function readResulst(status, response) {
@@ -27,7 +20,6 @@ function readResulst(status, response) {
         console.log('Backend error');
     }
 }
-
 
 /**
  * Simple HTTP Get asynchronous function
@@ -47,4 +39,15 @@ function httpGetAsync(url, callback){
     }
     xmlHttp.open("GET", url, true);
     xmlHttp.send(null);
+}
+
+function signIn(sessionID){
+    var profile = gUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail());
+
+    var id_token = gUser.getAuthResponse().id_token;
+    httpGetAsync("ttak.chzo.fr:54321/session/"+id_token+"/"+sessionID+"/", readResulst);
 }
