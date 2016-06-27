@@ -127,6 +127,9 @@
                 redmetrics.connected = true;
                 playerId = result.data.id;
 
+                //Call redmetrics OAuth API
+                postSessionId(playerId);
+
                 postDeferred = Q.defer();
 
                 // Start sending events
