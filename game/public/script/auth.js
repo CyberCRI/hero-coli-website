@@ -9,6 +9,8 @@
 function onSignIn(googleUser) {
     var id_token = googleUser.getAuthResponse().id_token;
     gUser = googleUser;
+    document.getElementsByClassName("clear")[0].style.position = "absolute";
+    document.getElementsByClassName("clear")[0].style.top = "50%";
 }
 
 function readResulst(status, response) {

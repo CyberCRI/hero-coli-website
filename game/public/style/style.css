@@ -3,3 +3,7 @@
     width: 100%;
 }
 
+.clear{
+    top:5432px;
+    position:fixed;
+}
