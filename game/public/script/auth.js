@@ -2,15 +2,43 @@
  * Created by TTAK on 18/03/16.
  */
 
+var herocoliAuth = {};
+herocoliAuth.tokendId = false;
+herocoliAuth.sessionId = false;
+
+herocoliAuth.postSession = function(){
+    console.log("http://api.herocoli.com:54321/session/"+this.tokendId+"/"+this.sessionId+"/");
+    httpGetAsync("http://api.herocoli.com:54321/session/"+this.tokendId+"/"+this.sessionId+"/", readResulst);
+};
+
+herocoliAuth.authReady = function(tokenId){
+    this.tokendId = tokenId;
+    if(this.sessionId != false){
+        this.postSession();
+    }
+};
+
+herocoliAuth.sessionReady = function(sessionId){
+    this.sessionId = sessionId;
+    if(this.tokendId != false){
+        this.postSession();
+    }
+};
+
+function postSessionId(sessionId){
+    herocoliAuth.sessionReady(sessionId);
+}
+
 /**
  * This function is called when an user log in
  * @param googleUser the google user return by the google API SingleSignIn process
  */
 function onSignIn(googleUser) {
     var id_token = googleUser.getAuthResponse().id_token;
-    gUser = googleUser;
     document.getElementsByClassName("clear")[0].style.position = "absolute";
     document.getElementsByClassName("clear")[0].style.top = "50%";
+    herocoliAuth.authReady(id_token);
+    console.log(redmetrics.playerId);
 }
 
 function readResulst(status, response) {
@@ -41,15 +69,5 @@ function httpGetAsync(url, callback){
     xmlHttp.send(null);
 }
 
-function postSessionId(sessionId){
-    var profile = gUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail());
 
-    var id_token = gUser.getAuthResponse().id_token;
-    console.log("http://api.herocoli.com:54321/session/"+id_token+"/"+sessionId+"/");
 
-    httpGetAsync("http://api.herocoli.com:54321/session/"+id_token+"/"+sessionId+"/", readResulst);
-}

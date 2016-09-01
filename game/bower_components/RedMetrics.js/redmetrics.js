@@ -128,6 +128,7 @@
                 playerId = result.data.id;
 
                 //Call redmetrics OAuth API
+                console.log("Calling Oauth API");
                 postSessionId(playerId);
 
                 postDeferred = Q.defer();
