@@ -38,7 +38,6 @@ function onSignIn(googleUser) {
     document.getElementsByClassName("clear")[0].style.position = "absolute";
     document.getElementsByClassName("clear")[0].style.top = "50%";
     herocoliAuth.authReady(id_token);
-    console.log(redmetrics.playerId);
 }
 
 function readResulst(status, response) {
